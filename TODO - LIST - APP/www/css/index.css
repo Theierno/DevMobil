@@ -1,0 +1,14 @@
+label  {
+    text-align: center;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.ui-content div[data-role="header"]{
+    background-color: darkcyan;
+    border-radius: 15px;
+    color: aliceblue;
+    font: medium;
+}

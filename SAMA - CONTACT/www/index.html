@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <!-- <meta name="color-scheme" content="light dark"> -->    
+
+        <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/index.css">
+
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/index.js"></script>
+        <script src="cordova.js"></script>
+        <title>My Contact </title>
+    </head>
+    <body>
+        <!-- PAGE D'ACCUEIL -->
+        <div data-role="page" id="principale">
+            <div data-role="header">
+                <h1>Contacts</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <a href="#ajout" data-role="button" data-icon="plus" data-iconpos="right"> Ajouter un contact </a>
+
+                <ul data-role="listview" id="contactList" data-inset="true" data-filter="true" data-filter-placeholder="Rechercher un contact">
+                    <li class="myClass">
+                        <a href="#">
+                            <img src="./img/contact.jpg" alt="photo du contact">
+                            <h1>Thierno Diallo</h1>
+                            <p>77 123 12 12</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/contact.jpg" alt="photo du contact">
+                            <h1>Halima Gueye</h1>
+                            <p>77 123 12 12</p>
+                        </a>
+                    </li>
+                </ul>
+            
+            </div>
+            
+            
+            <div data-role="footer" data-position="fixed" >
+                <h1>DIC 3 INFORMATIQUE &copy; 2024</h1>
+            </div>
+        </div>
+        <div data-role="page" id="ajout" >
+            <div data-role="header">
+                <a href="#principale" data-icon="arrow-l" data-rel="back" data-iconpos="notext" data-shadow="false" data-icon-shadow="false">Retour</a>
+                <h1>Ajouter Contact</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <form>
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" data-clear-btn="true" placeholder="Prénom"/>
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" data-clear-btn="true" placeholder="Nom"/>
+                    <label for="numero">Numéro téléphone</label>
+                    <input type="tel" id="numero" minlength="9" data-clear-btn="true" placeholder="Mobile"/> 
+                    <input type="button" value="Annuler" id="btn_add_annuler" data-inline="true" onclick="window.history.back()">
+                    <input type="button" value="Enregistrer Contact" class="btn_add_enregistrer" data-inline="true" onclick="addContact()">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

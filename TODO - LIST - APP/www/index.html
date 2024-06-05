@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
+        <link rel="stylesheet" href="lib/themes/ismaila.min.css" />
+        <link rel="stylesheet" href="lib/themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="lib/jquery.mobile.structure-1.4.5.min.css" />
+
+        <!-- <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css"> -->
+        <link rel="stylesheet" href="css/index.css">
+        <title>ToDo List App</title>
+        <script src="js/index.js"></script>
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-theme="b">
+            <div data-role="header">
+                <h1>To Do List App</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <form>
+                    <label for="task"> Ajouter une tache</label>
+                    <input type="text" id="task" placeholder="Nouvelle tache">
+                    <input type="button" value="Ajouter" onclick="ajouterTache()">
+                    <input type="button" value="Réinitialiser" onclick="reinitialiser()">
+                </form>
+
+                <div data-role="header">
+                    <h1>Tâches en cours</h1>
+                </div>
+                    <ul data-role="listview" id="taskListCurrent" data-inset="true">
+                        
+                        
+                    </ul>
+                
+                <div data-role="header">
+                    <h1>Tâches terminées</h1>
+                </div>
+                <ul data-role="listview" id="taskListDone" data-inset="true">
+
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1> DIC3 &copy; Mai 2023</h1>
+            </div>
+        </div>
+    </body>
+</html>
